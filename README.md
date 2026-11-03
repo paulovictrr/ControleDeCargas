@@ -26,7 +26,7 @@ O computador que usar o executável não precisa ter Python instalado. Os dados 
 3. Crie uma Release com uma tag de versão, como `v1.0.1`, e anexe o executável com o nome exato `ControleDeCargas.exe`.
 4. No programa, abra **Atualizações**. O repositório `paulovictrr/ControleDeCargas` já vem preenchido; clique em **Verificar atualizações**.
 
-O programa confere a versão e o SHA-256 informado pelo GitHub antes de disponibilizar o download. O executável baixado é separado do programa aberto; feche o programa e abra a versão nova. O banco local permanece no computador.
+O programa confere a versão e o SHA-256 informado pelo GitHub. Após sua confirmação, fecha, substitui o executável atual e reinicia. O banco local permanece no computador.
 
 ## Dados locais
 
