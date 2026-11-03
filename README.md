@@ -13,7 +13,7 @@ Aplicativo local para Windows, feito em Python e Tkinter, para acompanhar cargas
 ## Gerar no Windows
 
 1. Instale Python 3.11 ou superior e marque a opção para adicionar Python ao PATH.
-2. Deixe `controle_cargas.py`, `gerar_executavel.bat`, `requirements.txt` e `ImagemLogo.png` na mesma pasta.
+2. Deixe `ControleCargas.py`, `gerar_executavel.bat`, `requirements.txt` e `ImagemLogo.png` na mesma pasta.
 3. Execute `gerar_executavel.bat` com acesso à internet.
 4. O executável será criado em `dist/ControleDeCargas.exe`.
 
