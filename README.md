@@ -16,6 +16,7 @@ Aplicativo local para Windows, feito em Python e Tkinter, para controlar cargas,
 - Filtros por destino, motorista, período, horário, status e produto.
 - Backup e restauração, com frequência automática diária, semanal ou quinzenal.
 - Atualizações pelo GitHub, com conferência SHA-256 e verificação de inicialização antes de substituir o executável.
+- Conexões HTTPS do atualizador validadas com os certificados confiáveis do Windows.
 - Abas carregadas sob demanda para reduzir o tempo de abertura.
 
 ## Arquivos do projeto
@@ -40,10 +41,10 @@ O computador que usar o executável não precisa ter Python instalado. O gerador
 1. Mantenha `APP_VERSION` no código igual à versão que será publicada.
 2. Envie o código atualizado ao repositório público do GitHub.
 3. Gere o executável com o `.bat` atualizado.
-4. Crie uma Release com a tag correspondente à versão (por exemplo, `v1.0.4`) e anexe o arquivo chamado exatamente `ControleDeCargas.exe`.
+4. Crie uma Release com a tag correspondente à versão (por exemplo, `v1.0.6`) e anexe o arquivo chamado exatamente `ControleDeCargas.exe`.
 5. Na aba **Atualizações**, clique em **Verificar atualizações** e depois confirme **Atualizar e reiniciar**.
 
-O repositório `paulovictrr/ControleDeCargas` já vem preenchido. O atualizador confere a versão e o SHA-256 do arquivo e testa se o executável baixado consegue iniciar antes de instalá-lo.
+O repositório `paulovictrr/ControleDeCargas` já vem preenchido. O atualizador confere a versão e o SHA-256 do arquivo, usa os certificados confiáveis do Windows para HTTPS e testa se o executável baixado consegue iniciar antes de instalá-lo.
 
 ## Dados locais
 
