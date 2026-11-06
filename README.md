@@ -9,14 +9,17 @@ Aplicativo local para Windows, feito em Python e Tkinter, para controlar cargas,
 - Status da carga alterável pelo botão que aparece na coluna **Status** após selecionar uma carga.
 - Cadastro de cargas históricas sem nova movimentação de estoque.
 - Estoque por produto. Salvar uma carga desconta as quantidades; registrar uma devolução devolve ao estoque.
+- Se o saldo registrado estiver desatualizado, uma carga emergencial pode ser autorizada com confirmação; a saída é descontada normalmente e o saldo pode ficar negativo até a contagem física atualizar o estoque.
+- Registrar uma devolução de carga que movimentou o estoque devolve a quantidade ao saldo e registra o crédito no histórico de estoque. Cargas históricas não alteram o estoque, pois sua saída não foi descontada pelo sistema.
 - Histórico de ajustes de estoque com data (`DD-MM-AAAA`) e hora em colunas separadas. É possível selecionar e excluir vários registros do histórico sem alterar o saldo atual.
 - Listas com fonte de 11 pt. Os detalhes da carga podem ser abertos com duplo clique.
 - Relatórios de cargas em PDF ou Excel, com uma carga por linha, produtos agrupados e data e hora de geração.
 - Relatório PDF do estoque sem código de produto, também com data e hora de geração.
-- Filtros por destino, motorista, período, horário, status e produto.
+- Filtros por código da carga, destino, motorista, período, horário, status e produto.
+- Relatório PDF de produtos com opção para incluir todos os produtos ou somente os que têm estoque disponível.
 - Backup e restauração, com frequência automática diária, semanal ou quinzenal.
 - Atualizações pelo GitHub, com conferência SHA-256 e verificação de inicialização antes de substituir o executável.
-- Conexões HTTPS do atualizador validadas com os certificados confiáveis do Windows.
+- Conexões HTTPS do atualizador validadas com o pacote de certificados públicos incluído no executável e com certificados confiáveis do Windows.
 - Abas carregadas sob demanda para reduzir o tempo de abertura.
 
 ## Arquivos do projeto
@@ -41,10 +44,10 @@ O computador que usar o executável não precisa ter Python instalado. O gerador
 1. Mantenha `APP_VERSION` no código igual à versão que será publicada.
 2. Envie o código atualizado ao repositório público do GitHub.
 3. Gere o executável com o `.bat` atualizado.
-4. Crie uma Release com a tag correspondente à versão (por exemplo, `v1.0.6`) e anexe o arquivo chamado exatamente `ControleDeCargas.exe`.
+4. Crie uma Release com a tag correspondente à versão (por exemplo, `v1.0.11`) e anexe o arquivo chamado exatamente `ControleDeCargas.exe`.
 5. Na aba **Atualizações**, clique em **Verificar atualizações** e depois confirme **Atualizar e reiniciar**.
 
-O repositório `paulovictrr/ControleDeCargas` já vem preenchido. O atualizador confere a versão e o SHA-256 do arquivo, usa os certificados confiáveis do Windows para HTTPS e testa se o executável baixado consegue iniciar antes de instalá-lo.
+O repositório `paulovictrr/ControleDeCargas` já vem preenchido. O atualizador confere a versão e o SHA-256 do arquivo, valida HTTPS usando o pacote de certificados públicos e os certificados confiáveis do Windows, e testa se o executável baixado consegue iniciar antes de instalá-lo.
 
 ## Dados locais
 
